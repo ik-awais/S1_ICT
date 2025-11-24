@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeFlow - Save Lives Through Blood Donation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <span class="logo-text">LifeFlow</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#ai-features">AI Features</a></li>
+                <li><a href="#donate" class="btn-nav">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Give Blood,</span>
+                    <span class="title-line">Give Life</span>
+                </h1>
+                <p class="hero-subtitle">One donation can save up to three lives. Be a hero today.</p>
+                <div class="hero-buttons">
+                    <a href="#register" class="btn btn-primary">Donate Blood</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="total-donors">0</span>
+                        <span class="stat-label">Donors</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="lives-saved">0</span>
+                        <span class="stat-label">Lives Saved</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="blood-drop"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Why Donate Blood?</h2>
+            <p class="section-subtitle">Your donation makes a difference in someone's life</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Emergency Care</h3>
+                    <p>Blood is crucial for surgeries, trauma care, and emergency medical procedures.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👶</div>
+                    <h3>Save Children</h3>
+                    <p>Help children with severe anemia, cancer, and blood disorders live normal lives.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Health Benefits</h3>
+                    <p>Regular blood donation can reduce health risks and maintain your well-being.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Community Impact</h3>
+                    <p>Join a community of heroes making a real difference in countless lives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section (Week 7 - Database Integration) -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2 class="section-title">Live Dashboard</h2>
+            <p class="section-subtitle">Real-time blood bank statistics</p>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Blood Inventory</h3>
+                    <div id="inventory-chart" class="chart-container">
+                        <div class="blood-type-bar" data-type="A+">
+                            <span class="blood-label">A+</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="A-">
+                            <span class="blood-label">A-</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="B+">
+                            <span class="blood-label">B+</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="B-">
+                            <span class="blood-label">B-</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="O+">
+                            <span class="blood-label">O+</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="O-">
+                            <span class="blood-label">O-</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="AB+">
+                            <span class="blood-label">AB+</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                        <div class="blood-type-bar" data-type="AB-">
+                            <span class="blood-label">AB-</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0%"></div>
+                                <span class="bar-value">0 units</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Donor Statistics</h3>
+                    <div id="donor-stats" class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">👥</span>
+                            <div>
+                                <div class="stat-number-small" id="total-registered">0</div>
+                                <div class="stat-label-small">Total Registered</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📅</span>
+                            <div>
+                                <div class="stat-number-small" id="this-month">0</div>
+                                <div class="stat-label-small">This Month</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <div>
+                                <div class="stat-number-small" id="most-common">N/A</div>
+                                <div class="stat-label-small">Most Common Type</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⚡</span>
+                            <div>
+                                <div class="stat-number-small" id="active-donors">0</div>
+                                <div class="stat-label-small">Active Donors</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Emergency Requests</h3>
+                    <div id="emergency-list" class="emergency-container">
+                        <div class="emergency-item">
+                            <span class="urgency urgent">URGENT</span>
+                            <div class="emergency-details">
+                                <strong>O- Needed</strong>
+                                <p>City Hospital - 5 units</p>
+                            </div>
+                        </div>
+                        <div class="emergency-item">
+                            <span class="urgency high">HIGH</span>
+                            <div class="emergency-details">
+                                <strong>AB+ Needed</strong>
+                                <p>General Hospital - 2 units</p>
+                            </div>
+                        </div>
+                        <div class="emergency-item">
+                            <span class="urgency moderate">MODERATE</span>
+                            <div class="emergency-details">
+                                <strong>A+ Needed</strong>
+                                <p>Care Center - 3 units</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-text">
+                    <h2 class="section-title">Your Impact</h2>
+                    <p class="impact-description">Every pint of blood can be separated into multiple components, helping several patients with different needs.</p>
+                    
+                    <div class="impact-items">
+                        <div class="impact-item">
+                            <div class="impact-icon">🔴</div>
+                            <div class="impact-details">
+                                <h4>Red Blood Cells</h4>
+                                <p>Help patients with anemia and blood loss during surgery</p>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">💛</div>
+                            <div class="impact-details">
+                                <h4>Plasma</h4>
+                                <p>Critical for burn victims and trauma patients</p>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">🔵</div>
+                            <div class="impact-details">
+                                <h4>Platelets</h4>
+                                <p>Essential for cancer patients and those with clotting disorders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-visual">
+                    <div class="circle-graphic">
+                        <div class="circle-text">
+                            <span class="big-number">3</span>
+                            <span class="small-text">Lives Saved<br>Per Donation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form (Week 6 - Forms & Data Processing) -->
+    <section id="register" class="register">
+        <div class="container">
+            <h2 class="section-title">Become a Donor</h2>
+            <p class="section-subtitle">Join our community of lifesavers</p>
+            <form id="donor-form" class="registration-form">
+                <div class="form-grid">
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <select name="blood-type" id="blood-type" required>
+                        <option value="">Select Blood Type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    <input type="number" name="age" id="age" placeholder="Age" min="18" max="65" required>
+                    <input type="number" name="weight" id="weight" placeholder="Weight (kg)" min="50" required>
+                    <input type="text" name="city" id="city" placeholder="City" required>
+                    <select name="last-donation" id="last-donation" required>
+                        <option value="">Last Donation</option>
+                        <option value="never">Never Donated</option>
+                        <option value="3months">3+ Months Ago</option>
+                        <option value="6months">6+ Months Ago</option>
+                        <option value="1year">1+ Year Ago</option>
+                    </select>
+                </div>
+                <div class="form-checkbox">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the terms and conditions and confirm I am healthy to donate blood
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Register as Donor</button>
+            </form>
+            <div id="form-response" class="form-response"></div>
+        </div>
+    </section>
+
+    <!-- AI Features Section (Week 12 - AI & ML) -->
+    <section id="ai-features" class="ai-section">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Features</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9)">Advanced technology for better blood donation management</p>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">🤖</div>
+                    <h3>Smart Matching</h3>
+                    <p>AI algorithms match donors with recipients based on location, blood type, and urgency</p>
+                    <button class="btn btn-secondary" onclick="demoMatching()">Demo AI Matching</button>
+                    <div id="matching-result" class="ai-result"></div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">📊</div>
+                    <h3>Demand Prediction</h3>
+                    <p>Machine learning predicts blood demand patterns based on historical data</p>
+                    <button class="btn btn-secondary" onclick="demoPrediction()">View Predictions</button>
+                    <div id="prediction-result" class="ai-result"></div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-icon">🎯</div>
+                    <h3>Eligibility Checker</h3>
+                    <p>Instant AI-powered eligibility assessment for potential donors</p>
+                    <button class="btn btn-secondary" onclick="checkEligibility()">Check Eligibility</button>
+                    <div id="eligibility-result" class="ai-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Process -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Donation Process</h2>
+            <p class="section-subtitle">Simple, safe, and quick</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Registration</h3>
+                    <p>Sign up and provide basic information about your health history</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Health Screening</h3>
+                    <p>Quick checkup to ensure you're eligible and healthy to donate</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Donation</h3>
+                    <p>The actual donation takes only 8-10 minutes of your time</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Refreshments</h3>
+                    <p>Relax and enjoy snacks while your body adjusts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="donate" class="cta">
+        <div class="cta-background"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Save Lives?</h2>
+                <p>Schedule your donation appointment today and become a hero</p>
+                <a href="#register" class="btn btn-large">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LifeFlow</h3>
+                    <p>Connecting donors with those in need, saving lives one donation at a time.</p>
+                    <div class="network-status">
+                        <span id="connection-status" class="status-indicator">🔴 Offline</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#register">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@lifeflow.org</p>
+                    <p>Phone: 1-800-DONATE</p>
+                    <p>Emergency: 911</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LifeFlow. All rights reserved. Powered by ICT innovations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

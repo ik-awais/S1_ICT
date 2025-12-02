@@ -4,7 +4,7 @@
 // ============================================================================
 
 // ============================================================================
-// Week 6: Data Processing & Analytics
+// Data Processing & Analytics
 // ============================================================================
 
 class LifeFlowAnalytics {
@@ -67,7 +67,7 @@ class LifeFlowAnalytics {
 }
 
 // ============================================================================
-// Week 7: Database Management (Local Storage Simulation)
+// Database Management (Local Storage Simulation)
 // ============================================================================
 
 class LifeFlowDatabase {
@@ -168,7 +168,7 @@ class LifeFlowDatabase {
 }
 
 // ============================================================================
-// Week 9: Networking & Real-time Features
+// Networking & Real-time Features
 // ============================================================================
 
 class LifeFlowNetwork {
@@ -226,7 +226,7 @@ class LifeFlowNetwork {
 }
 
 // ============================================================================
-// Week 12: AI & Machine Learning Features
+// AI & Machine Learning Features
 // ============================================================================
 
 class LifeFlowAI {
